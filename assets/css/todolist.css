@@ -1,0 +1,82 @@
+
+.todolist{
+	width: 300px;
+	margin: 50px auto;
+	/*the 50px on the margin will mean that top and bottom will be 0 and auto references left and right*/
+	border: 2px solid black;
+	background: lightgray;
+	box-shadow: 0 0 6px black;
+}
+
+.completed {
+	color: red;
+	text-decoration: line-through;
+}
+
+h1{
+	background-color: lightblue;
+	margin: 0;
+	padding-left: 20px;
+	text-transform: capitalize;
+	font-weight: normal;
+	/*without bold*/
+}
+
+/*getting rid of bullet points from li*/
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	background-color: white;
+	height: 30px;
+	line-height: 30px;
+	/*so the text will occupy the entire height*/
+}
+
+li:nth-child(2n){
+	background-color: lightgray;
+}
+input{
+	color: blue;
+	font-size: 20px;
+	background-color: lightgray;
+	width: 100%;
+	box-sizing: border-box;
+	/*the box sizing will resize the input box to the width*/
+}
+
+/*this below will affect when we click inside the input box*/
+input:focus{
+	background-color: lightgreen;
+	border: 5px solid;
+}
+
+body{
+	background: #f79d00; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #f79d00 , #64f38c); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #f79d00 , #64f38c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.fa-address-card-o{
+	float: right;
+}
+
+span{
+	background-color: red;
+	height: 30px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.3s linear;
+	opacity: 0;
+}
+
+/*when we hover on the li will appear the bin(span)*/
+li:hover span{
+	width: 40px;
+	opacity: 1;
+}
